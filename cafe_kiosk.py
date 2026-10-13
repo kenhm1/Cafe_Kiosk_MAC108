@@ -1,9 +1,12 @@
+# Menu Items
+menu_items = [("Blueberry Muffin", 2.00), ("Any Size coffee", 3.00), ("Hot chocolate", 2.50)]
+
+
 total_bill = 0.00
 while True:
     print("-----Py Cafe-----") 
-    print("1. Blueberry Muffin - $2.00")
-    print("2. Any size Coffee - $3.00")
-    print("3. Hot Chocolate - $2.50")
+    for i, (item, price) in enumerate(menu_items, start=1):
+        print(f"{i}. {item} - ${price:.2f}")
     print("4. Checkout")
     choice = input("Select Options (1-4)")
     if choice == "1":
